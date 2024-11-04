@@ -1,19 +1,17 @@
 import React from "react";
+import bgImg from "../assets/ather-energy-ZjOQIFXq5Ns-unsplash.jpg";
 
 function Hero() {
   return (
-    <section className="relative h-[calc(100vh)] m-auto bg-gradient-to-r from-[#f7fef6] to-[#e8f5e9 ] pt-20 overflow-hidden">
-      {/* slanted geometry shape */}
-      <div
-        className="absolute top-0 left-[40%] right-0 h-full bg-[#d7f4dd] z-0"
-        style={{
-          clipPath: "polygon(35% 0, 100% 0%, 100% 100%, 0 100%)", // Adjusts the slant
-        }}
-      />
-
-      <div className="max-w-[1280px] m-auto h-full flex justify-between gap-2 items-center translate-y-[-8%]">
+    <section
+      className={`relative h-[calc(84vh)] m-auto mt-[0px] overflow-hidden bg-cover bg-right bg-no-repeat`}
+      style={{
+        backgroundImage: `url(${bgImg})`,
+      }}
+    >
+      <div className="max-w-[1280px] m-auto h-full flex justify-between items-start gap-2 ">
         {/* left */}
-        <div className="left">
+        <div className="left w-[55%] p-10 py-14 rounded-xl shadow-xl backdrop-blur-md translate-y-[25%] bg-gradient-to-r from-[#f7f6f3] to-[#f9e8e4]">
           {/* hero heading */}
           <div>
             <h2 className="text-6xl">
@@ -26,13 +24,13 @@ function Hero() {
           </div>
 
           {/* hero info */}
-          <p className="text max-w-[60%] px-1 text-lg mt-2 text-[#4a4a49]/95 tracking-wide">
+          <p className="max-w-[90%] px-1 text-lg mt-2 text-[#4a4a49]/95 tracking-wide">
             Navigate Bengaluru effortlessly. Perfect for commutes, deliveries,
-            or exploring, our reliable eco-friendly rides come at minimal cost.
+            or exploring at minimal cost.
           </p>
 
           {/* CTA */}
-          <div className="rounded bg-lime-500/20 bg-[#b3e6a1] inline-block px-3 py-2 ml-2 mt-7 shadow">
+          <div className="rounded bg-lime-500 bg-[#b3e6a1] inline-block px-3 py-2 ml-2 mt-7 shadow">
             <p className="text-md font-medium">need help? call us!</p>
             <a href="tel:" className="text-2xl font-semibold hover:underline">
               +91 9785642354
@@ -41,9 +39,9 @@ function Hero() {
         </div>
 
         {/* right */}
-        <div className="min-w-[490px] max-w-[500px] h-[350px] border bg-gray-200 rounded-md mt-2">
+        {/* <div className="min-w-[490px] max-w-[500px] h-[350px] border bg-gray-200 rounded-md mt-2">
           <h2>photo</h2>
-        </div>
+        </div> */}
       </div>
     </section>
   );

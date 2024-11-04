@@ -1,11 +1,20 @@
 import React from "react";
-import { BigNavbar, Hero, Navbar, ServiceOverview } from "./Components";
+import {
+  About,
+  BigNavbar,
+  Hero,
+  Navbar,
+  ServiceOverview,
+  Stats,
+} from "./Components";
 
 function App() {
   return (
-    <div className="bg-gradient-to-r from-[#f7f6f3] to-[#e9e8e4 ]">
+    <div className="bg-gradient-to-r from-[#f7f6f3] to-[#e9e8e4]">
       <BigNavbar />
       <Hero />
+      <Stats />
+      <About />
       <ServiceOverview />
     </div>
   );
