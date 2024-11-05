@@ -1,8 +1,9 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import {
   About,
   BigNavbar,
   Hero,
+  LogoSection,
   Navbar,
   ServiceOverview,
   Stats,
@@ -13,7 +14,8 @@ function App() {
     <div className="bg-gradient-to-r from-[#f7f6f3] to-[#e9e8e4]">
       <BigNavbar />
       <Hero />
-      <Stats />
+      <LogoSection />
+      {/* <Stats /> */}
       <About />
       <ServiceOverview />
     </div>

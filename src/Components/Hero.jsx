@@ -1,12 +1,21 @@
-import React from "react";
-import bgImg from "../assets/ather-energy-ZjOQIFXq5Ns-unsplash.jpg";
+import React, { useEffect, useState } from "react";
+// import bgImg from "../assets/ather-energy-ZjOQIFXq5Ns-unsplash.jpg";
 
 function Hero() {
+  const [heroBgImg, setHeroBgImg] = useState(null);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = "/src/assets/ather-energy-ZjOQIFXq5Ns-unsplash.jpg";
+    img.onload = () => setHeroBgImg(img.src);
+    console.log(img.src);
+  }, []);
+
   return (
     <section
-      className={`relative h-[calc(84vh)] m-auto mt-[0px] overflow-hidden bg-cover bg-right bg-no-repeat`}
+      className={`relative h-[calc(88vh)] m-auto mt-[0px] overflow-hidden bg-cover bg-right bg-no-repeat`}
       style={{
-        backgroundImage: `url(${bgImg})`,
+        backgroundImage: heroBgImg ? `url(${heroBgImg})` : "none",
       }}
     >
       <div className="max-w-[1280px] m-auto h-full flex justify-between items-start gap-2 ">
@@ -14,19 +23,23 @@ function Hero() {
         <div className="left w-[55%] p-10 py-14 rounded-xl shadow-xl backdrop-blur-md translate-y-[25%] bg-gradient-to-r from-[#f7f6f3] to-[#f9e8e4]">
           {/* hero heading */}
           <div>
-            <h2 className="text-6xl">
+            <h2 className="text-6xl leading-tight">
               <span className="text-6xl text-lime-500 font-semibold">
                 Electric
               </span>{" "}
-              <span className="text-[#4a4a4a] font-semibold">Bike Rentals</span>
+              <span className="text-[#4a4a4a] font-semibold">
+                bikes for delivery use!
+              </span>
             </h2>
-            <h3 className="text-[55px] text-[#4a4a4a]">In Bengaluru!</h3>
+            {/* <h3 className="ml-1 mt-4 text-xl font-semibold italic text-[#4a4a4a]/90 tracking-wide">
+              Perfect for Delivery executives in Bengaluru!
+            </h3> */}
           </div>
 
           {/* hero info */}
-          <p className="max-w-[90%] px-1 text-lg mt-2 text-[#4a4a49]/95 tracking-wide">
-            Navigate Bengaluru effortlessly. Perfect for commutes, deliveries,
-            or exploring at minimal cost.
+          <p className="mt-5 max-w-[95%] px-1 text-lg mt-2 text-[#4a4a49]/95 tracking-wide">
+            Increase your earnings, get around faster, and save on fuel & money.
+            The ideal electric bike choice for delivery drivers in Bengaluru!
           </p>
 
           {/* CTA */}
@@ -37,11 +50,6 @@ function Hero() {
             </a>
           </div>
         </div>
-
-        {/* right */}
-        {/* <div className="min-w-[490px] max-w-[500px] h-[350px] border bg-gray-200 rounded-md mt-2">
-          <h2>photo</h2>
-        </div> */}
       </div>
     </section>
   );
