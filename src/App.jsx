@@ -8,6 +8,7 @@ import {
   ServiceOverview,
   Stats,
 } from "./Components";
+import BikeDetails from "./Components/BikeDetails";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       {/* <Stats /> */}
       <About />
       <ServiceOverview />
+      <BikeDetails />
     </div>
   );
 }

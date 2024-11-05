@@ -53,9 +53,9 @@ function Testimonials() {
   };
 
   return (
-    <div className="mb-20">
+    <div className="mb-16">
       {/* section heading */}
-      <h2 className="text-4xl font-semibold text-center mt-8 mb-8">
+      <h2 className="text-4xl font-semibold text-center pt-20 mb-8">
         What our customers say?
       </h2>
 
